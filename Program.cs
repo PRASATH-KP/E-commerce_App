@@ -11,7 +11,6 @@
         public static void Main(string[] args)
         {
 
-
             registrationDetails.Add(new RegistrationDetails(Role.Manager, "Palani", "palani@gmail.com"));
             registrationDetails.Add(new RegistrationDetails(Role.Admin, "Paul Johnson", "paul.johnson@gmail.com"));
             registrationDetails.Add(new RegistrationDetails("Olivia Smith", "olivia.smith@gmail.com", 1500));
@@ -30,17 +29,17 @@
             productDetails.Add(new ProductDetails("Logitech MX Master 3 Mouse", 25, 99));
             productDetails.Add(new ProductDetails("Apple iPad Air", 12, 599));
 
-            foreach (var user in registrationDetails)
+            foreach (var person in registrationDetails)
             {
-                Console.Write($"Role of the Person : {user.UserRole}");
+                Console.Write($"Role of the Person : {person.UserRole}");
                 Console.Write(" ");
-                Console.Write($" ID : {user.Id}");
+                Console.Write($" ID : {person.Id}");
                 Console.Write(" ");
-                Console.Write($" Name : {user.Name}");
+                Console.Write($" Name : {person.Name}");
                 Console.Write(" ");
-                Console.Write($" Balance : {user.WalletBalance}");
+                Console.Write($" Balance : {person.WalletBalance}");
                 Console.Write(" ");
-                Console.Write($" MailId : {user.MailId}");
+                Console.Write($" MailId : {person.MailId}");
                 Console.WriteLine();
             }
 
@@ -50,9 +49,6 @@
                 Console.Write(" Product Count : {0} ", product.Quantity);
                 Console.Write(" Product Price : " + product.PriceOfProduct);
                 Console.WriteLine();
-
-
-
             }
 
             
@@ -61,21 +57,21 @@
             foreach (var user in registrationDetails)
             {
 
-                //if (user.UserId % 2 == 0)
+                //if (person.UserId % 2 == 0)
                 //{
-                //   DepositData deposit = new DepositData(user.UserId, 100, DateTime.Now);
+                //   DepositData deposit = new DepositData(person.UserId, 100, DateTime.Now);
                 //   depositDatas.Add(deposit);
-                //   user.WalletBalance= deposit.DepositAmmount(100, DateTime.Now, user.WalletBalance);
+                //   person.WalletBalance= deposit.DepositAmmount(100, DateTime.Now, person.WalletBalance);
                 //}
                 //else 
                 //{
-                //   WithdrawData withdraw = new WithdrawData(user.UserId, 20, DateTime.Now);
+                //   WithdrawData withdraw = new WithdrawData(person.UserId, 20, DateTime.Now);
                 //   withdrawDatas.Add(withdraw);
-                //   user.WalletBalance= withdraw.WithdrawAmmount(20, DateTime.Now, user.WalletBalance);
+                //   person.WalletBalance= withdraw.WithdrawAmmount(20, DateTime.Now, person.WalletBalance);
                 //}
-                //Console.Write($"User ID : {user.UserId}");
+                //Console.Write($"User ID : {person.UserId}");
                 //Console.Write(" ");
-                //Console.Write($"User Balance : {user.WalletBalance}");
+                //Console.Write($"User Balance : {person.WalletBalance}");
                 //Console.WriteLine();
             }
 
