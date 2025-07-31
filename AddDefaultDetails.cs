@@ -8,8 +8,7 @@ using System.Threading.Tasks;
 namespace E_commerce_App
 {
     public class AddDefaultDetails
-   
-        {
+    {
             public static List<RegistrationDetails> registrationDetails = new List<RegistrationDetails>();
             public static List<ProductDetails> productDetails = new List<ProductDetails>();
             public static List<DepositData> depositDatas = new List<DepositData>();
@@ -36,7 +35,7 @@ namespace E_commerce_App
                 productDetails.Add(new ProductDetails("Logitech MX Master 3 Mouse", 25, 99));
                 productDetails.Add(new ProductDetails("Apple iPad Air", 12, 599));
 
-                // DepositData - Use RegistrationDetails Ids as string userIds
+                // DepositData 
                 depositDatas.Add(new DepositData("UserId101", 500, DateTime.Now.AddDays(-3))); // Olivia
                 depositDatas.Add(new DepositData("UserId102", 300, DateTime.Now.AddDays(-2))); // Liam
                 depositDatas.Add(new DepositData("UserId103", 700, DateTime.Now.AddDays(-1))); // Sophia
@@ -46,8 +45,7 @@ namespace E_commerce_App
                 withdrawDatas.Add(new WithdrawData("UserId104", 100, DateTime.Now));             // Daniel
                 withdrawDatas.Add(new WithdrawData("UserId105", 50, DateTime.Now));              // Fiona
             }
-        }
     }
+}
 
-}
-}
+
