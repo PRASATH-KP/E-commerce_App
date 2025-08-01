@@ -1,13 +1,11 @@
-﻿using System.Reflection.Metadata;
-
-namespace EcommerceApp
+﻿namespace EcommerceApp
 {
 
     internal class Program
     {
         public static List<WithdrawData> _widthdrawDetails = AddDefaultDetails.withdrawDatas;
         public static List<DepositData> _depositDetails = AddDefaultDetails.depositDatas;
-        public static  List <RegistrationDetails> _userDetails = AddDefaultDetails.registrationDetails;
+        public static List<RegistrationDetails> _userDetails = AddDefaultDetails.registrationDetails;
         public static RegistrationDetails? _currentUser;
         public static List<ProductDetails> _productDetails = AddDefaultDetails.productDetails;
         public static void Main(string[] args)
@@ -42,9 +40,9 @@ namespace EcommerceApp
                     _currentUser = Regsiter();
                     MainMenu();
                     break;
-            };
+            }
+            ;
         }
-
         private static void SubMenu()
         {
             bool menuCheck = true;
@@ -74,17 +72,17 @@ namespace EcommerceApp
                     break;
                 case 4:
                     WidthdrawSummary();
-                    break ;
-            };
+                    break;
+            }
+            ;
         }
-
         private static void WidthdrawSummary()
         {
             Console.WriteLine($"The Widthdraw details of {_currentUser.Name}");
 
             foreach (var widthraw in _widthdrawDetails)
             {
-                if(widthraw.UserId == _currentUser.Id)
+                if (widthraw.UserId == _currentUser.Id)
                 {
                     Console.Write($"widthraw Ammount = {widthraw.Ammount} ");
                     Console.Write($" Time of Withdraw  {widthraw.TimeWithdraw} ");
@@ -92,9 +90,7 @@ namespace EcommerceApp
                 }
             }
             SubMenu();
-
         }
-
         private static void DepositSummary()
         {
             Console.WriteLine($"The Deposit details of {_currentUser.Name}");
@@ -110,8 +106,6 @@ namespace EcommerceApp
             }
             SubMenu();
         }
-            while (!(loginCheck && (option >= 1 && option <= 3)));
-
         private static void ListOfProducts()
         {
             foreach (var product in _productDetails)
@@ -123,19 +117,14 @@ namespace EcommerceApp
                 Console.WriteLine();
             }
             SubMenu();
-
         }
-
         private static void UpdateDetails()
         {
             SubMenu();
         }
-
         public static RegistrationDetails login()
         {
-            
             bool Found = false;
-            
             do
             {
                 Console.WriteLine("Enter User Id to Login or press 0 to Exit");
@@ -148,14 +137,12 @@ namespace EcommerceApp
                 }
                 foreach (var user in _userDetails)
                 {
-
                     if (user.Id.ToLower() == Id.ToLower() && user.UserRole == Role.User)
-                        
+
                     {
                         Console.WriteLine("Success");
                         Found = true;
                         return user;
-
                     }
                 }
                 if (!Found)
@@ -163,7 +150,6 @@ namespace EcommerceApp
                     Console.WriteLine($"Not Found for this ID {Id} try again or press 0 to Exit");
                 }
             } while (!Found);
-            
             return null;
         }
         public static RegistrationDetails Regsiter()
