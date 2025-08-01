@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace EcommerceApp
 {
-    public class WithdrawData 
+    public class WithdrawData
     {
-        public string UserId { get; set; } 
+        public string UserId { get; set; }
         public decimal Ammount { get; set; }
-        public DateTime TimeWithdraw {  get; set; } 
+        public DateTime TimeWithdraw { get; set; }
 
         public WithdrawData(string userId, decimal ammount, DateTime timeWithdraw)
         {
@@ -19,10 +19,10 @@ namespace EcommerceApp
             TimeWithdraw = timeWithdraw;
         }
 
-        public decimal WithdrawAmmount( decimal ammount, DateTime TimeofAction , decimal balance)
+        public decimal WithdrawAmmount(decimal ammount, DateTime TimeofAction, decimal balance)
         {
             return balance = balance - ammount;
         }
-    
+
     }
 }

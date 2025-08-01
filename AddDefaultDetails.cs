@@ -41,6 +41,7 @@ namespace E_commerce_App
                 depositDatas.Add(new DepositData("UserId103", 700, DateTime.Now.AddDays(-1))); // Sophia
 
                 // WithdrawData
+            withdrawDatas.Add(new WithdrawData("UserId101", 100, DateTime.Now));             // Olivia
                 withdrawDatas.Add(new WithdrawData("UserId103", 200, DateTime.Now.AddDays(-1))); // Sophia
                 withdrawDatas.Add(new WithdrawData("UserId104", 100, DateTime.Now));             // Daniel
                 withdrawDatas.Add(new WithdrawData("UserId105", 50, DateTime.Now));              // Fiona

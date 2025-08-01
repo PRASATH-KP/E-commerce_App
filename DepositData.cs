@@ -10,7 +10,7 @@ namespace EcommerceApp
     {
 
 
-        public string UserId { get; set; }  
+        public string UserId { get; set; }
 
         public decimal Ammount { get; set; }
 
@@ -27,6 +27,6 @@ namespace EcommerceApp
         {
             return balance = balance + ammount;
         }
-        
+
     }
 }
