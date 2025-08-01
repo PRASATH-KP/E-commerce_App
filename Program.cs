@@ -1,68 +1,110 @@
-﻿using E_commerce_App;
-
-namespace EcommerceApp
+﻿namespace EcommerceApp
 {
 
     internal class Program
     {
-        
 
+
+        public static RegistrationDetails _currentUser;
         public static void Main(string[] args)
         {
-            var users = AddDefaultDetails.registrationDetails;
-            var products = AddDefaultDetails.productDetails;
-            var deposits = AddDefaultDetails.depositDatas;
-            var withdraws = AddDefaultDetails.withdrawDatas;
 
-            foreach (var person in users)
+
+
+
+            bool loginCheck = true;
+            int option;
+
+            Console.WriteLine("Welcome to E-Commerce App");
+            Console.WriteLine("Choose the oprtions below to proceed furhter \n 1.Login as existing User \n 2.Register as New User \n 3.Others ");
+            do
             {
-                Console.Write($"Role of the Person : {person.UserRole}");
-                Console.Write(" ");
-                Console.Write($" ID : {person.Id}");
-                Console.Write(" ");
-                Console.Write($" Name : {person.Name}");
-                Console.Write(" ");
-                Console.Write($" Balance : {person.WalletBalance}");
-                Console.Write(" ");
-                Console.Write($" MailId : {person.MailId}");
-                Console.WriteLine();
-            }
 
-            foreach (var product in products)
+                loginCheck = int.TryParse(Console.ReadLine(), out option);
+                if ((loginCheck && (option >= 1 && option <= 3)))
+                    break;
+                Console.WriteLine("You have given worng option");
+            }
+            while (!(loginCheck && (option >= 1 && option <= 3)));
+
+            switch (option)
             {
-                Console.Write($"Product ID : {product.ProductID} ");
-                Console.Write(" Product Count : {0} ", product.Quantity);
-                Console.Write(" Product Price : " + product.PriceOfProduct);
-                Console.WriteLine();
+                case 1:
+                    _currentUser = login();
+                    MainMenu();
+                    break;
+                case 2:
+                    _currentUser = Regsiter();
+                    MainMenu();
+                    break;
+                    //case 3:
+
             }
+            ;
 
-            
 
 
-            //foreach (var user in registrationDetails)
+            //foreach (var person in users)
+            //{
+            //    Console.Write($"Role of the Person : {person.UserRole}");
+            //    Console.Write(" ");
+            //    Console.Write($" ID : {person.Id}");
+            //    Console.Write(" ");
+            //    Console.Write($" Name : {person.Name}");
+            //    Console.Write(" ");
+            //    Console.Write($" Balance : {person.WalletBalance}");
+            //    Console.Write(" ");
+            //    Console.Write($" MailId : {person.MailId}");
+            //    Console.WriteLine();
+            //}
+
+            //foreach (var product in products)
+            //{
+            //    Console.Write($"Product ID : {product.ProductID} ");
+            //    Console.Write(" Product Count : {0} ", product.Quantity);
+            //    Console.Write(" Product Price : " + product.PriceOfProduct);
+            //    Console.WriteLine();
+            //}
+
+
+            //foreach (var user in UserDetails)
             //{
 
-            //    //if (person.UserId % 2 == 0)
+            //    //if (user.UserId % 2 == 0)
             //    //{
-            //    //   DepositData deposit = new DepositData(person.UserId, 100, DateTime.Now);
+            //    //   DepositData deposit = new DepositData(user.UserId, 100, DateTime.Now);
             //    //   depositDatas.Add(deposit);
-            //    //   person.WalletBalance= deposit.DepositAmmount(100, DateTime.Now, person.WalletBalance);
+            //    //   user.WalletBalance= deposit.DepositAmmount(100, DateTime.Now, user.WalletBalance);
             //    //}
             //    //else 
             //    //{
-            //    //   WithdrawData withdraw = new WithdrawData(person.UserId, 20, DateTime.Now);
+            //    //   WithdrawData withdraw = new WithdrawData(user.UserId, 20, DateTime.Now);
             //    //   withdrawDatas.Add(withdraw);
-            //    //   person.WalletBalance= withdraw.WithdrawAmmount(20, DateTime.Now, person.WalletBalance);
+            //    //   user.WalletBalance= withdraw.WithdrawAmmount(20, DateTime.Now, user.WalletBalance);
             //    //}
-            //    //Console.Write($"User ID : {person.UserId}");
+            //    //Console.Write($"User ID : {user.UserId}");
             //    //Console.Write(" ");
-            //    //Console.Write($"User Balance : {person.WalletBalance}");
+            //    //Console.Write($"User Balance : {user.WalletBalance}");
             //    //Console.WriteLine();
             //}
 
 
-            Console.ReadLine();
+            //Console.ReadLine();
 
+        }
+
+        private static void MainMenu()
+        {
+            throw new NotImplementedException();
+        }
+
+        public static RegistrationDetails login()
+        {
+            return null;
+        }
+        public static RegistrationDetails Regsiter()
+        {
+            return null;
         }
     }
 }
