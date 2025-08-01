@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.NetworkInformation;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -13,8 +14,7 @@ namespace EcommerceApp
         User
     }
     public class RegistrationDetails
-    {
-       
+    {  
         private string _iD;
         public string Id 
         { 
@@ -23,18 +23,15 @@ namespace EcommerceApp
                 return _iD; 
             } 
         }
-
         private static int user_Id = 100;
-        private static int admin_Id = 100;
-        private static int manager_Id = 100;
 
+        private static int admin_Id = 100;
+
+        private static int manager_Id = 100;
         public Role UserRole { get; set; }
         public string Name { get; set; }
-
         public string MailId { get; set; }
-
-        public decimal? WalletBalance { get; set; }
-        
+        public decimal? WalletBalance { get; set; }        
         public RegistrationDetails(Role userRole, string name, string mailID)
         {
             if (userRole == Role.User)
@@ -55,9 +52,7 @@ namespace EcommerceApp
                 Name = name;
                 MailId = mailID;
             }
-
             WalletBalance = null;
-
         }
 
         // User Constructor
@@ -70,5 +65,6 @@ namespace EcommerceApp
             WalletBalance = walletBalance;
             MailId = mailID;
         }
+
     }
 }
