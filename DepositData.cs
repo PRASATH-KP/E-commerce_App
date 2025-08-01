@@ -16,7 +16,7 @@ namespace EcommerceApp
 
         public DateTime TimeofDeposit { get; set; }
 
-        public  DepositData(int userId, decimal ammount, DateTime timeofDeposit)
+        public  DepositData(string userId, decimal ammount, DateTime timeofDeposit)
         {
             UserId = userId;
             Ammount = ammount;
