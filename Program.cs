@@ -110,6 +110,7 @@ namespace EcommerceApp
             }
             SubMenu();
         }
+            while (!(loginCheck && (option >= 1 && option <= 3)));
 
         private static void ListOfProducts()
         {
