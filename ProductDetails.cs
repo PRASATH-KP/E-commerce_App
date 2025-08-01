@@ -10,7 +10,6 @@ namespace EcommerceApp
     public class ProductDetails
     {
         public int Quantity { get; set; }
-
         public string ProductName { get; set; }
         public string ProductID { get; set; }
         public decimal PriceOfProduct { get; set; }
@@ -24,7 +23,5 @@ namespace EcommerceApp
             Quantity = quantity;
             PriceOfProduct = priceOfProduct;
         }
-
-        //public static int ActionOnProduct( int productID , int noOfItems , )
     }
 }
