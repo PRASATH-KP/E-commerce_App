@@ -10,13 +10,13 @@ namespace EcommerceApp
     {
 
 
-        public int UserId { get; set; }  
+        public string UserId { get; set; }  
 
         public decimal Ammount { get; set; }
 
         public DateTime TimeofDeposit { get; set; }
 
-        public  DepositData(int userId, decimal ammount, DateTime timeofDeposit)
+        public  DepositData(string userId, decimal ammount, DateTime timeofDeposit)
         {
             UserId = userId;
             Ammount = ammount;

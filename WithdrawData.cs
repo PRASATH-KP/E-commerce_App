@@ -8,11 +8,11 @@ namespace EcommerceApp
 {
     public class WithdrawData 
     {
-        public int UserId { get; set; } 
+        public string UserId { get; set; } 
         public decimal Ammount { get; set; }
         public DateTime TimeWithdraw {  get; set; } 
 
-        public WithdrawData(int userId, decimal ammount, DateTime timeWithdraw)
+        public WithdrawData(string userId, decimal ammount, DateTime timeWithdraw)
         {
             UserId = userId;
             Ammount = ammount;
